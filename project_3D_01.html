@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>&lt;model-viewer&gt; template</title>
+        <meta charset="utf-8">
+        <meta name="description" content="&lt;model-viewer&gt; template">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="./css/backProjects.css">
+        <link type="text/css" href="./css/animation_boa.css" rel="stylesheet"/>
+        <!-- OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
+        <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
+    </head>
+    <body>
+        <div>
+            <nav style="margin:0px 0px">
+              <div class="nav-wrapper">
+              <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+              <ul class="right hide-on-med-and-down">
+                  <li><a href="index.html"><i class="material-icons right ">scatter_plot</i>Home</a></li>
+                  <li><a href="projects.html"><i class="material-icons right ">rocket</i>Projects</a></li>
+                  <li><a href="#"><i class="material-icons right ">feed</i>Blog</a></li>
+              </ul>
+              </div>
+            </nav>
+            <ul class="sidenav" id="mobile-demo">
+              <li><a href="index.html"><i class="material-icons left ">scatter_plot</i>Home</a></li>
+              <li class="divider"></li>
+              <li><a href="projects.html"><i class="material-icons left ">rocket</i>Projects</a></li>
+              <li class="divider"></li>
+              <li><a href="#"><i class="material-icons left ">feed</i>Blog</a></li>
+            </ul>
+        </div>
+        <!--<model-viewer> HTML element-->
+        <div class="container">  
+            <div class="row">  
+                <div class="col s12">
+                    <h2>3D Model from MicroCT Scanner</h2>
+                </div> 
+            </div>
+            <div class="row">  
+                <div class="col s10 offset-s1" id="window_boa">
+                    <div class="model">  
+                        <model-viewer
+                            bounds="tight" 
+                            enable-pan src="./3d/serpiente.glb"
+                            ar ar-modes="webxr scene-viewer quick-look" 
+                            camera-controls environment-image="./img/music_hall_01_1k.hdr" 
+                            poster="./img/poster.webp" shadow-intensity="0.3" 
+                            shadow-softness="1"
+                            auto-rotate>
+                            <div id="ar-prompt">
+                                <img src="./img/ar_hand_prompt.png">
+                            </div>
+                        </model-viewer> 
+                    </div> 
+                </div>
+            </div>
+            <div class="row">  
+                <div class="col s12">
+                    <p>Semitransparent skull of a Tree Boa, "snake skull & brain endocast" It was CT scanned on the Ohio University MicroCT Scanner; Source: WitmerLab at Ohio University,
+                        licensed under CC Attribution-NonCommercial-NoDerivs</p>
+                </div> 
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="gray_section_red"></div>
+        <!-- <script src="script.js"></script>-->
+        <!-- Loads <model-viewer> for browsers: -->
+        <script src="./js/projects.js"></script>      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+          
+        <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+        
+    
+    </body>
+</html>
