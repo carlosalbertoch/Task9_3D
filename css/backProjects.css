@@ -12,7 +12,7 @@ nav{
   }
 .sidenav{
     width: 120px;
-    height: 170px;
+    height: 99%;
     background: rgba(158, 158, 158, 0.5);
     box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
     backdrop-filter: blur(0px);
